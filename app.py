@@ -11,18 +11,17 @@ app = Flask(__name__)
 
 # Available routes
 @app.route("/")
-@app.route("/home")
-@app.route("/index")
 @app.route("/index.html")
 def home():
     return render_template("index.html")
 
-@app.route("/about")
+# @app.route("/about")
+@app.route("/about.html")
 def about():
     return render_template("about.html")
 
-@app.route("/model")
-@app.route("/our-model")
+# @app.route("/model")
+# @app.route("/our-model")
 @app.route("/our-model.html")
 def model():
     return render_template("our-model.html")
