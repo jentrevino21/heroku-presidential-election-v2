@@ -1,6 +1,6 @@
 // Create machine learning function
 async function initiateModel(zipInput, employmentInput, amountInput) {
-    const responseData = await d3.json("http://localhost:5000/model/" + zipInput + "/" + employmentInput + "/" + amountInput).then(responseData => displayResults(responseData));
+    const responseData = await d3.json(`https://presidential-election-analysis.herokuapp.com/${zipInput}/${employmentInput}/${amountInput}`).then(responseData => displayResults(responseData));
     console.log(responseData);
 };
 
