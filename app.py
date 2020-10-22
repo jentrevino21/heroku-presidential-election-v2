@@ -10,8 +10,8 @@ from flask import Flask, jsonify, render_template, request
 app = Flask(__name__)
 
 # Available routes
-@app.route("/")
-# @app.route("/index.html")
+# @app.route("/")
+@app.route("/index.html")
 def home():
     return render_template("index.html")
 
