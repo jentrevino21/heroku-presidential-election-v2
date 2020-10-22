@@ -1,7 +1,8 @@
 // Create machine learning function
 async function initiateModel(zipInput, employmentInput, amountInput) {
-    const responseData = await d3.json(`https://presidential-election-analysis.herokuapp.com/${zipInput}/${employmentInput}/${amountInput}`).then(responseData => displayResults(responseData));
+    const responseData = await d3.json("https://presidential-election-analysis.herokuapp.com/" + zipInput + "/" + employmentInput + "/" + amountInput).then(responseData => displayResults(responseData));
     console.log(responseData);
+
 };
 
 
@@ -23,16 +24,16 @@ function displayResults(jsonResponse) {
     // Display results
     d3.selectAll("#results_text_one")
         .append("text")
-        .text(`Looks like you support ${president}!`);
+        .text(`Looks like you support ${ president }!`);
 
     d3.selectAll("#results_text_two")
         .append("text")
-        .text(`We are 82.3% confident in this projection.`);
+        .text(`We are 82.3 % confident in this projection.`);
 
     var resultsHTML = d3.select("#results_html");
     
     resultsHTML.append("img")
-        .attr("src", `${presidentImg}`)
+        .attr("src", `${ presidentImg }`)
         .classed("img-fluid");
 };
 
