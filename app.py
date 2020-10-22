@@ -16,6 +16,11 @@ def home():
     return render_template("index.html")
 
 # @app.route("/about")
+@app.route("/favicon.ico")
+def about():
+    return render_template("favicon.html")
+    
+# @app.route("/about")
 @app.route("/about.html")
 def about():
     return render_template("about.html")
